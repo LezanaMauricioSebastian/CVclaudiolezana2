@@ -1,94 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lezana Dario Claudio</title>
-    <link href="../assets/css/bootstrap.min.css" rel="stylesheet" >
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <script src="../assets/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="../assets/bootstrap-icons-1.10.4/font/bootstrap-icons.css">
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lezana Dario Claudio</title>
+  <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="../assets/bootstrap-icons-1.10.4/font/bootstrap-icons.css">
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="../assets/js/bootstrap.bundle.min.js"></script>
+  <style>
+    body {
+      padding-top: 20px;
+    }
+    .edu-title {
+      font-weight: bold;
+      margin-bottom: 0;
+    }
+    .edu-date {
+      text-align: right;
+      margin-bottom: 0;
+    }
+    .edu-institution {
+      color: gray;
+      margin-bottom: 10px;
+    }
+  </style>
 </head>
 <body>
-    <div class="menuContainer"></div>
+  <div class="menuContainer"></div>
 
-    <script>
-        $(document).ready(function(){
-            $('.menuContainer').load('nav.html');
-        });
-    </script>
-    <div class="mx-0 px-0 row container-fluid">
-     
-            <div class="pt-3  container-fluid">
-                <h2 class="p-4 text-center">Formación</h2>
-                <div class="row">
-                <p class="col-8 m-0 font-weight-bold">
-                    Maestría en Ciencia de Datos
-                </p>
-                <p class="col-md-4 col-12 m-0">
-                    mar 2021 - mar 2025
-                </p>
-                </div>
-                <p class="m-0 text-muted">
-                    Instituto Tecnológico de Buenos Aires - ITBA, C.A.B.A
+  <script>
+    $(document).ready(function(){
+      $('.menuContainer').load('nav.html');
+    });
+  </script>
 
-                </p>
+  <div class="mx-0 px-0 row container-fluid">
+    <div class="pt-3 container-fluid">
+      <h2 class="p-4 text-center">Formación</h2>
+      <div id="formacion"></div>
+    </div>
+  </div>
 
-                <div class="row">
-                <p class="col-8 m-0 font-weight-bold">
-                    Diplomado en Ciencia de Datos
-                </p>
-                <p class="col-12 col-md-4 m-0">
-                    mar 2020 - dic 2020
-                </p>
-                </div>
-                <p class="text-muted">
-                    Instituto Tecnológico de Buenos Aires - ITBA, C.A.B.A
+  <footer class="text-center mt-5 mb-3">
+    <img src="assets/img/FirmaClaudio.png" alt="Firma" style="max-width:500px">
+    <p class="text-center font-weight-bold col-5">16/04/2025</p>
+  </footer>
 
-                </p>
-                <div class="row">
-                <p class="col-8 m-0 font-weight-bold">
-                    Licenciado en Sistemas de Información
-                </p>
-                <p class="col-12 col-md-4 m-0">
-                    mar 2011 - dic 2021
-                </p>
-                </div>
-                <p class="text-muted">
-                    Universidad Nacional del Nordeste - UNNE, Corrientes
-                </p>
-     
-                <div class=" m-0 row">
-                <p class="col-8 p-0 m-0 font-weight-bold">
-                    Analista Programador Universitario 
-                </p>
-                
-                <p class="col-12 col-md-4 m-0">
-                    mar 2011 - dic 2016
-                </p>
-                </div>
-                <p class="p-0 text-muted">
-                    Universidad Nacional del Nordeste - UNNE, Corrientes
-                </p>
-                <div class="row">
-                <p class="col-8 m-0 font-weight-bold">
-                    Agronomo General 
-                </p>
-                <p class="col-12 col-md-4 m-0">
-                    mar 1989 - dic 1994
-                </p>
-                </div>
-                <p class="text-muted">
-                    Escuela Regional de Agricultura, Ganadería e Industrias Afines - E. R. A. G. I. A. - UNNE, Corrientes
-                </p>
-                </div>
-               
-            </div>
-      
-    <footer>
-        <img src="assets/img/FirmaClaudio.png" alt="Firma" style="max-width:500px">
-        <p class="text-center font-weight-bold col-5">16/04/2025</p>
-    </footer>
+  <script>
+    const formacion = [
+      {
+        titulo: "Maestría en Ciencia de Datos",
+        fecha: "mar 2021 - mar 2025",
+        institucion: "Instituto Tecnológico de Buenos Aires - ITBA, C.A.B.A"
+      },
+      {
+        titulo: "Diplomado en Ciencia de Datos",
+        fecha: "mar 2020 - dic 2020",
+        institucion: "Instituto Tecnológico de Buenos Aires - ITBA, C.A.B.A"
+      },
+      {
+        titulo: "Licenciado en Sistemas de Información",
+        fecha: "mar 2011 - dic 2021",
+        institucion: "Universidad Nacional del Nordeste - UNNE, Corrientes"
+      },
+      {
+        titulo: "Analista Programador Universitario",
+        fecha: "mar 2011 - dic 2016",
+        institucion: "Universidad Nacional del Nordeste - UNNE, Corrientes"
+      },
+      {
+        titulo: "Agrónomo General",
+        fecha: "mar 1989 - dic 1994",
+        institucion: "Escuela Regional de Agricultura, Ganadería e Industrias Afines - E.R.A.G.I.A. - UNNE, Corrientes"
+      }
+    ];
+
+    const container = document.getElementById("formacion");
+
+    formacion.forEach(item => {
+      const bloque = document.createElement("div");
+      bloque.classList.add("mb-3");
+
+      bloque.innerHTML = `
+        <div class="row">
+          <p class="col-8 m-0 edu-title">${item.titulo}</p>
+          <p class="col-12 col-md-4 m-0 edu-date">${item.fecha}</p>
+        </div>
+        <p class="edu-institution">${item.institucion}</p>
+      `;
+
+      container.appendChild(bloque);
+    });
+  </script>
 </body>
 </html>

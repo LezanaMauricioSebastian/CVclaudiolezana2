@@ -18,111 +18,73 @@
         });
     </script>
 
-    <div class="row  container-fluid">
-        <div class=" mx-0 px-0 container-fluid">
-           
-            
-                <div class="pt-3  container-fluid">
-                    <h2 class="p-4 text-center">Experiencia</h2>
-                    <div class="row">
-                        <p class=" col-12 col-md-8 font-weight-bold m-0">
-                            Coordinador Sistemas Información Territorial
-                        </p>
-                            <p class="col-12 col-md-4 m-0">
-                            ago 2021 - presente 
-                            </p>
-                        </div>
-                        <p class="text-muted m-0">
-                            Instituto Provincial de Estadísticas y Ciencias de Datos - IPECD, Resistencia - Chaco
-                        </p>
-                    
-                    <p class="text-justify">
-                        Elaboración de Mapas temáticos mediante Sistemas de Información Geográfica, como apoyo de encuestas, censos y operativos especiales. Análisis de datos de repositorio de datos. 
-                    </p>
-
-                    <div class="row">
-                        <p class=" col-8 font-weight-bold m-0">
-                            Coordinador MMUVRA
-                        </p>
-                            <p class="col-12 col-md-4 m-0">
-                            jul 2008 - presente 
-                            </p>
-                        </div>
-                        <p class="text-muted m-0">
-                            INDEC - DPEC, Resistencia - Chaco
-                        </p>
-                    
-                    <p class="text-justify">
-                        Coordinador de la "Muestra Maestra de Viviendas de la República Argentina 2019" y Coordinador Cartografía del 'Censo Nacional de Población y Viviendas - Ronda 2022'. INDEC-DPEC Chaco; Elaboración de Mapas temáticos mediante Sistemas de información Geográfica. Análisis de datos del repositorio DPEC.
-                    </p>           
-                <div class="row">
-                        <p class=" col-8 font-weight-bold m-0">
-                            Ayudante Logistica
-                        </p>
-                            <p class="col-12 col-md-4 m-0">
-                            abr 2006 - jun 2007 
-                            </p>
-                        </div>
-                        <p class="text-muted m-0">
-                            CIAGRO S.R.L, Resistencia - Chaco
-                        </p>
-                    
-                    <p class="text-justify">
-                        Control de ingreso-egreso de mercaderia, control de stock, distribucion de agroquimicos
-                    </p>   
-                    <div class="row">
-                        <p class="col-12 col-md-8 font-weight-bold m-0">
-                            Administrativo Explotación Agropecuaria
-                        </p>
-                            <p class="col-12 col-md-4 m-0">
-                            sep 2001 - feb 2006 
-                            </p>
-                    </div>
-                    <p class="text-muted m-0">
-                            KAYNE S.A, La Rioja - Prov. de la Rioja
-                    </p>
-                    
-                    <p class="text-justify">
-                        Manejo administrativo de una explotación agropecuaria extensiva, como algodón, girasol, soja, maíz, sorgo. Manejo de personal
-                    </p>  
-                    <div class="row">
-                        <p class="col-12 col-md-8 font-weight-bold m-0">
-                            Ayudante especializado agropecuario
-                        </p>
-                            <p class="col-12 col-md-4 m-0">
-                            may 1996 - sep 2001 
-                            </p>
-                    </div>
-                        <p class="text-muted m-0">
-                            UNITEC ACRO S.A, Presidencia Roca - Chaco
-                        </p>
-                    
-                    <p class="text-justify"> 
-                        Ayudante de campo en toma de muestras de suelos y semillas, extensivos, operador de riego por aspersión tipo Volley 8000 por telemetría desde PC remota, manejo de datos y elaboración de informes de riego, topografía y climáticos.   
-                    </p>                   
-                    <div class="row">
-                        <p class="col-12 col-md-8 font-weight-bold m-0">
-                            Jefe de Trabajos Horticultura Especial II
-                        </p>
-                            <p class="col-12 col-md-4 m-0">
-                            may 1995 - dic 1995 
-                            </p>
-                    </div>
-                        <p class="text-muted m-0">
-                            E.R.A.G.I.A - UNNE, Corrientes
-                        </p>
-                    
-                    <p>
-                        Docente, Ciclo Básico
-                    </p>   
-                </div>
-                  
-        </div>
-     
-    </div>
-    <footer>
-        <img src="assets/img/FirmaClaudio.png" alt="Firma" style="max-width:500px">
-        <p class="text-center font-weight-bold col-5">20/12/2024</p>
-    </footer>
-</body>
-</html>
+    <div class="container">
+        <h2 class="text-center mb-4">Experiencia</h2>
+        <div id="experiencia"></div>
+      </div>
+    
+      <footer class="text-center mt-5 mb-3">
+        <img src="assets/img/FirmaClaudio.png" alt="Firma" style="max-width:500px"/>
+        <p class="font-weight-bold mt-3">20/12/2024</p>
+      </footer>
+    
+      <script>
+        const experiencia = [
+          {
+            puesto: "Coordinador Sistemas Información Territorial",
+            fecha: "ago 2021 - presente",
+            empresa: "Instituto Provincial de Estadísticas y Ciencias de Datos - IPECD, Resistencia - Chaco",
+            descripcion: "Elaboración de Mapas temáticos mediante Sistemas de Información Geográfica, apoyo en encuestas, censos, análisis de datos."
+          },
+          {
+            puesto: "Coordinador MMUVRA",
+            fecha: "jul 2008 - presente",
+            empresa: "INDEC - DPEC, Resistencia - Chaco",
+            descripcion: "Coordinación de la Muestra Maestra de Viviendas 2019 y Cartografía Censo 2022. Análisis y mapas temáticos con SIG."
+          },
+          {
+            puesto: "Ayudante Logística",
+            fecha: "abr 2006 - jun 2007",
+            empresa: "CIAGRO S.R.L, Resistencia - Chaco",
+            descripcion: "Control de stock, ingreso-egreso de mercadería, distribución de agroquímicos."
+          },
+          {
+            puesto: "Administrativo Explotación Agropecuaria",
+            fecha: "sep 2001 - feb 2006",
+            empresa: "KAYNE S.A, La Rioja - Prov. de la Rioja",
+            descripcion: "Gestión administrativa en cultivo extensivo (algodón, girasol, soja, etc.) y manejo de personal."
+          },
+          {
+            puesto: "Ayudante especializado agropecuario",
+            fecha: "may 1996 - sep 2001",
+            empresa: "UNITEC ACRO S.A, Presidencia Roca - Chaco",
+            descripcion: "Trabajo de campo, operador de riego por telemetría, topografía y elaboración de informes técnicos."
+          },
+          {
+            puesto: "Jefe de Trabajos Horticultura Especial II",
+            fecha: "may 1995 - dic 1995",
+            empresa: "E.R.A.G.I.A - UNNE, Corrientes",
+            descripcion: "Docente en ciclo básico."
+          }
+        ];
+    
+        const container = document.getElementById("experiencia");
+    
+        experiencia.forEach(item => {
+          const bloque = document.createElement("div");
+          bloque.classList.add("mb-4");
+    
+          bloque.innerHTML = `
+            <div class="row">
+              <p class="col-md-8 job-title">${item.puesto}</p>
+              <p class="col-md-4 job-date">${item.fecha}</p>
+            </div>
+            <p class="job-company">${item.empresa}</p>
+            <p>${item.descripcion}</p>
+          `;
+    
+          container.appendChild(bloque);
+        });
+      </script>
+    </body>
+    </html>

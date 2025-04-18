@@ -20,100 +20,12 @@
 
     <div class="row  container-fluid">
         <div class="mx-0 px-0 container-fluid">
-            
-                    <div class="pt-3  container-fluid">
-                        <h2 class="p-4 text-center">Cursos</h2>
-						
-						<div class="row">
-                            <p class=" col-9 font-weight-bold m-0">
-                                Data Analyst in Tableau
-                            </p>
-                                <p class="col-3 m-0">
-                                mar 2025  
-                                </p>
-                        </div>
-                            <p class="text-muted">
-                                on online non-credit course authorized by DataCamp.(2025)
-                            </p>
-									
-						
-                        <div class="row">
-                            <p class=" col-9 font-weight-bold m-0">
-                                GIS, Mapping, and Spatial Analysis Copstone
-                            </p>
-                                <p class="col-3 m-0">
-                                jun 2020  
-                                </p>
-                        </div>
-                            <p class="text-muted">
-                                on online non-credit course authorized by University of Toronto and offered thorough.(2020) Coursera
-                            </p>
-                        
-                        
-                        <div class="row">
-                            <p class=" col-9 font-weight-bold m-0">
-                                Introduction to GIS Mapping
-                            </p>
-                                <p class="col-3 m-0">
-                                mar 2020 
-                                </p>
-                        </div>
-                            <p class="text-muted ">
-                                on online non-credit course authorized by University of Toronto and offered thorough.(2020) Coursera
-                            </p>
-                        
-                        
-                        
-                        <div class="row">
-                            <p class=" col-9 font-weight-bold m-0">
-                                SIG y Teledetección en Sistemas Agropecuarios
-                            </p>
-                                <p class="col-3 m-0">
-                                oct 2020
-                                </p>
-                        </div>
-                            <p class="text-muted">
-                                Instituto Nacional de Tecnología Agropecuaria.
-                            </p>
-                        
-                         
-                        <div class="row">
-                            <p class=" col-9 font-weight-bold m-0">
-                                SoPI (Software de Procesamiento de Imágenes de la CONAE)
-                            </p>
-                                <p class="col-3 m-0">
-                                jun 2019
-                                </p>
-                        </div>
-                            <p class="text-muted">
-                                Naciones de teledetección y uso de software SOPI - CONAE
-                            </p>
- 
-                            <div class="row">
-                                <p class=" col-9 font-weight-bold m-0">
-                                    XIII JORNADAS DE IDERA - DATOS ESPACIALES ABIERTOS AL ALCANCE DE LA COMUNIDAD
-                                </p>
-                                    <p class="col-3 m-0">
-                                    jun 2018
-                                    </p>
-                            </div>
-                                <p class="text-muted">
-                                    Jornadas de IDERA, San Juan - Argentina
-                                </p>
-     
-                                <div class="row">
-                                    <p class=" col-9 font-weight-bold m-0">
-                                        Sistemas de Información Geográfica
-                                    </p>
-                                        <p class="col-3 m-0">
-                                        abr 2015
-                                        </p>
-                                </div>
-                                    <p class="text-muted">
-                                        ETISIG - Chaco
-                                    </p>
-         
-                        </div>
+            <div class="pt-3 container-fluid">
+  		<h2 class="p-4 text-center">Cursos</h2>
+  		<div id="cursos"></div>
+	    </div>
+
+                
         </div>
        
     </div>
@@ -121,5 +33,63 @@
         <img src="assets/img/FirmaClaudio.png" alt="Firma" style="max-width:500px">
         <p class="text-center font-weight-bold col-5">16/04/2025</p>
     </footer>
+    <script>
+  const cursos = [
+    {
+      titulo: "Data Analyst in Tableau",
+      fecha: "mar 2025",
+      descripcion: "on online non-credit course authorized by DataCamp.(2025)"
+    },
+    {
+      titulo: "GIS, Mapping, and Spatial Analysis Copstone",
+      fecha: "jun 2020",
+      descripcion: "on online non-credit course authorized by University of Toronto and offered thorough.(2020) Coursera"
+    },
+    {
+      titulo: "Introduction to GIS Mapping",
+      fecha: "mar 2020",
+      descripcion: "on online non-credit course authorized by University of Toronto and offered thorough.(2020) Coursera"
+    },
+    {
+      titulo: "SIG y Teledetección en Sistemas Agropecuarios",
+      fecha: "oct 2020",
+      descripcion: "Instituto Nacional de Tecnología Agropecuaria."
+    },
+    {
+      titulo: "SoPI (Software de Procesamiento de Imágenes de la CONAE)",
+      fecha: "jun 2019",
+      descripcion: "Naciones de teledetección y uso de software SOPI - CONAE"
+    },
+    {
+      titulo: "XIII JORNADAS DE IDERA - DATOS ESPACIALES ABIERTOS AL ALCANCE DE LA COMUNIDAD",
+      fecha: "jun 2018",
+      descripcion: "Jornadas de IDERA, San Juan - Argentina"
+    },
+    {
+      titulo: "Sistemas de Información Geográfica",
+      fecha: "abr 2015",
+      descripcion: "ETISIG - Chaco"
+    }
+  ];
+
+  const contenedor = document.getElementById("cursos");
+
+  cursos.forEach(curso => {
+    const row = document.createElement("div");
+    row.className = "row";
+    row.innerHTML = `
+      <p class="col-9 font-weight-bold m-0">${curso.titulo}</p>
+      <p class="col-3 m-0">${curso.fecha}</p>
+    `;
+    
+    const desc = document.createElement("p");
+    desc.className = "text-muted";
+    desc.textContent = curso.descripcion;
+
+    contenedor.appendChild(row);
+    contenedor.appendChild(desc);
+  });
+</script>
+
 </body>
 </html>
