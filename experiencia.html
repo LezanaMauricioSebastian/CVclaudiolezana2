@@ -9,6 +9,14 @@
     <script src="../assets/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="../assets/bootstrap-icons-1.10.4/font/bootstrap-icons.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        
+        .job-date {
+          text-align: right;
+          margin-bottom: 0;
+        }
+        
+      </style>
 </head>
 <body>
     <div class="menuContainer"></div>
@@ -16,9 +24,10 @@
         $(document).ready(function(){
             $('.menuContainer').load('nav.html');
         });
+        
     </script>
 
-    <div class="container">
+    <div class="container-fluid">
         <h2 class="text-center mb-4">Experiencia</h2>
         <div id="experiencia"></div>
       </div>
@@ -28,46 +37,8 @@
         <p class="font-weight-bold mt-3">20/12/2024</p>
       </footer>
     
-      <script>
-        const experiencia = [
-          {
-            puesto: "Coordinador Sistemas Información Territorial",
-            fecha: "ago 2021 - presente",
-            empresa: "Instituto Provincial de Estadísticas y Ciencias de Datos - IPECD, Resistencia - Chaco",
-            descripcion: "Elaboración de Mapas temáticos mediante Sistemas de Información Geográfica, apoyo en encuestas, censos, análisis de datos."
-          },
-          {
-            puesto: "Coordinador MMUVRA",
-            fecha: "jul 2008 - presente",
-            empresa: "INDEC - DPEC, Resistencia - Chaco",
-            descripcion: "Coordinación de la Muestra Maestra de Viviendas 2019 y Cartografía Censo 2022. Análisis y mapas temáticos con SIG."
-          },
-          {
-            puesto: "Ayudante Logística",
-            fecha: "abr 2006 - jun 2007",
-            empresa: "CIAGRO S.R.L, Resistencia - Chaco",
-            descripcion: "Control de stock, ingreso-egreso de mercadería, distribución de agroquímicos."
-          },
-          {
-            puesto: "Administrativo Explotación Agropecuaria",
-            fecha: "sep 2001 - feb 2006",
-            empresa: "KAYNE S.A, La Rioja - Prov. de la Rioja",
-            descripcion: "Gestión administrativa en cultivo extensivo (algodón, girasol, soja, etc.) y manejo de personal."
-          },
-          {
-            puesto: "Ayudante especializado agropecuario",
-            fecha: "may 1996 - sep 2001",
-            empresa: "UNITEC ACRO S.A, Presidencia Roca - Chaco",
-            descripcion: "Trabajo de campo, operador de riego por telemetría, topografía y elaboración de informes técnicos."
-          },
-          {
-            puesto: "Jefe de Trabajos Horticultura Especial II",
-            fecha: "may 1995 - dic 1995",
-            empresa: "E.R.A.G.I.A - UNNE, Corrientes",
-            descripcion: "Docente en ciclo básico."
-          }
-        ];
-    
+      <script type="module">
+        import { experiencia } from '/datos/experiencia.js';
         const container = document.getElementById("experiencia");
     
         experiencia.forEach(item => {
@@ -76,10 +47,10 @@
     
           bloque.innerHTML = `
             <div class="row">
-              <p class="col-md-8 job-title">${item.puesto}</p>
-              <p class="col-md-4 job-date">${item.fecha}</p>
+              <p class="col-8 m-0 font-weight-bold job-title">${item.puesto}</p>
+              <p class="col-12 col-md-4 m-0 job-date">${item.fecha}</p>
             </div>
-            <p class="job-company">${item.empresa}</p>
+            <p class="text-muted m-0 job-company">${item.empresa}</p>
             <p>${item.descripcion}</p>
           `;
     
