@@ -46,25 +46,25 @@
     <p class="text-center font-weight-bold col-5">16/04/2025</p>
   </footer>
 
-  <script type="module">
-    import { formacion } from 'https://github.com/LezanaMauricioSebastian/CVclaudiolezana2/blob/main/datos/formacion.js';
+  <script src="../datos/formacion.js"></script>
+<script>
+  const container = document.getElementById("formacion");
 
-    const container = document.getElementById("formacion");
+  formacion.forEach(item => {
+    const bloque = document.createElement("div");
+    bloque.classList.add("mb-3");
 
-    formacion.forEach(item => {
-      const bloque = document.createElement("div");
-      bloque.classList.add("mb-3");
+    bloque.innerHTML = `
+      <div class="row">
+        <p class="col-8 m-0 edu-title">${item.titulo}</p>
+        <p class="col-12 col-md-4 m-0 edu-date">${item.fecha}</p>
+      </div>
+      <p class="edu-institution">${item.institucion}</p>
+    `;
 
-      bloque.innerHTML = `
-        <div class="row">
-          <p class="col-8 m-0 edu-title">${item.titulo}</p>
-          <p class="col-12 col-md-4 m-0 edu-date">${item.fecha}</p>
-        </div>
-        <p class="edu-institution">${item.institucion}</p>
-      `;
+    container.appendChild(bloque);
+  });
+</script>
 
-      container.appendChild(bloque);
-    });
-  </script>
 </body>
 </html>
