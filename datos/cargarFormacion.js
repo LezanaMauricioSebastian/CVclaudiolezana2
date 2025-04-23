@@ -1,5 +1,4 @@
-// assets/js/cargarFormacion.js
-import { formacion } from './formacion.js';
+import { formacion } from 'formacion.js';
 
 export function renderFormacion(containerId = "formacion") {
   const container = document.getElementById(containerId);

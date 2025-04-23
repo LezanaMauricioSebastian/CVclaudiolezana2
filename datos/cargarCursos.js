@@ -1,4 +1,4 @@
-import { cursos } from './cursos.js';
+import { cursos } from 'cursos.js';
 
 export function renderCourses(containerId = "cursos") {
 const contenedor = document.getElementById(containerId);
