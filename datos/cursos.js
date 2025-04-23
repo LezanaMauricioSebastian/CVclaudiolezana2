@@ -1,4 +1,4 @@
-export const cursos = [
+const cursos = [
     {
       titulo: "Data Analyst in Tableau",
       fecha: "mar 2025",

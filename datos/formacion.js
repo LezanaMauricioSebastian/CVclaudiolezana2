@@ -1,4 +1,4 @@
-export const formacion = [
+ const formacion = [
     {
       titulo: "Maestría en Ciencia de Datos",
       fecha: "mar 2021 - mar 2025",

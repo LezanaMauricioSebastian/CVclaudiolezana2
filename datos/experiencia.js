@@ -1,4 +1,4 @@
-export const experiencia = [
+const experiencia = [
     {
       puesto: "Coordinador Sistemas Información Territorial",
       fecha: "ago 2021 - presente",
