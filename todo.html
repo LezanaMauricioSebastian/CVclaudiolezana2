@@ -105,42 +105,48 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 
   <!-- Cargar datos y renderizar -->
-  <script type="module">
-    import { renderFormacion } from '/datos/cargarFormacion.js';
-    import { renderExperience } from '/datos/cargarExperiencia.js';
-    import {renderCourses} from '/datos/cargarCursos.js'
-    await new Promise((resolve) => {
-        $('.perfil').load('perfil.html', resolve);
+  <!-- Definiciones de datos -->
+<script src="/datos/formacion.js"></script>
+<script src="/datos/experiencia.js"></script>
+<script src="/datos/cursos.js"></script>
+
+<!-- Funciones para renderizar -->
+<script src="/datos/cargarFormacion.js"></script>
+<script src="/datos/cargarExperiencia.js"></script>
+<script src="/datos/cargarCursos.js"></script>
+
+<!-- Código que ejecuta todo -->
+<script>
+  $(function() {
+    $('.menuContainer').load('nav.html');
+    $('.perfil').load('perfil.html', async () => {
+      renderFormacion();
+      renderExperience();
+      renderCourses();
     });
-    await renderFormacion();
-    await renderExperience();
-    await renderCourses();
+
     document.getElementById("descargar").addEventListener("click", async () => {
-        // 1. Renderiza el contenido primero
-        
-        
-        // 2. Asegura que el contenido sea visible
-        const element = document.getElementById("cv-content");
-        element.style.display = "block";
-        element.scrollIntoView();
-        
-        // 3. Opciones del PDF
-        const opt = {
-          margin: 0.5,
-          filename: 'CvLezanaClaudio.pdf',
-          html2canvas: { 
-            scale: 2,
-            scrollY: 0, // Evita desplazamientos
-            useCORS: true // Para imágenes externas
-          },
-          jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
-        };
-        
-        // 4. Pequeño delay para asegurar renderizado
-        setTimeout(() => {
-          html2pdf().set(opt).from(element).save();
-        }, 300);
-      });
-  </script>
+      const element = document.getElementById("cv-content");
+      element.style.display = "block";
+      element.scrollIntoView();
+
+      const opt = {
+        margin: 0.5,
+        filename: 'CvLezanaClaudio.pdf',
+        html2canvas: { 
+          scale: 2,
+          scrollY: 0,
+          useCORS: true
+        },
+        jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+      };
+
+      setTimeout(() => {
+        html2pdf().set(opt).from(element).save();
+      }, 300);
+    });
+  });
+</script>
+
 </body>
 </html>

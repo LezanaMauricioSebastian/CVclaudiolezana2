@@ -1,6 +1,4 @@
-import { formacion } from 'formacion.js';
-
-export function renderFormacion(containerId = "formacion") {
+function renderFormacion(containerId = "formacion") {
   const container = document.getElementById(containerId);
   if (!container) return;
 

@@ -1,6 +1,4 @@
-import { cursos } from 'cursos.js';
-
-export function renderCourses(containerId = "cursos") {
+function renderCourses(containerId = "cursos") {
 const contenedor = document.getElementById(containerId);
 
     cursos.forEach(curso => {

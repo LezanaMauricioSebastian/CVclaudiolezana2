@@ -1,6 +1,4 @@
-import { experiencia } from 'experiencia.js';
-
-export function renderExperience(containerId = "experiencia") {
+function renderExperience(containerId = "experiencia") {
 const container = document.getElementById(containerId);
 
 experiencia.forEach(item => {
